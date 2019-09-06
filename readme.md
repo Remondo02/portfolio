@@ -2,8 +2,6 @@
 
 ## Description des technologies employées
 
----
-
 1. XAMPP pour l'utilisation de PHP avec Apache ;
 2. Visual Studio Code comme éditeur de texte ;
 3. Git Bash ;
@@ -15,8 +13,6 @@
 9. Netlify.
 
 ## Justification technique
-
----
 
 - Le choix de XAMPP s'est imposé, car les ressources nécessaires lors de l'utilisation d'une VM ne permettaient pas un confort d'utilisation optimal sur mon ordinateur portable. En effet, cela occasionne une chauffe excessive et un bruit assourdissant, en plus de crashs occasionnels ;
 
