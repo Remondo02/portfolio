@@ -485,7 +485,7 @@ Section Portfolio
 }
 
 /***********************************
-Section Contact 
+Section Contact Form
 ***********************************/
 
 .form__container {
@@ -573,6 +573,123 @@ Section Contact
 .form__container textarea:valid {
   border-bottom: 2px solid #f7497d;
 }
+
+/***************************
+Section Contact contact
+**************************/
+
+.contact {
+  background: #151515;
+  padding-top: 12rem;
+  padding-bottom: 7.2rem;
+}
+
+.contact__info {
+  display: grid;
+  grid-template-columns: repeat(3, 400px);
+  justify-content: center;
+  align-content: center;
+  margin: 4.8rem 0 4.8em;
+  font-family: "poppins-regular", sans-serif;
+  font-size: 1.5em;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.contact__info__icon:last-child {
+  margin-right: 0;
+}
+
+.contact__info__icon__single {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.contact__info__icon__single i {
+  color: white;
+  font-size: 1.5em;
+}
+
+.contact .contact__info__icon h5 {
+  color: #9c27b0;
+  font-family: "poppins", sans-serif;
+  text-transform: uppercase;
+  font-size: 0.7em;
+  margin-bottom: 1em;
+  font-weight: 800;
+}
+.contact .contact__info__icon p {
+  color: #6e6e6e;
+  font-size: 0.7em;
+  font-family: "poppins-regular", sans-serif;
+}
+
+.contact__info h5 {
+  color: #9c27b0;
+}
+
+.social {
+  display: grid;
+  grid-template-columns: repeat(2, 400px);
+  padding-bottom: 3rem;
+  font-size: 1.4rem;
+  font-family: "poppins-regular", sans-serif;
+  justify-content: center;
+}
+
+.social .social__container__right__items a,
+.social .social__container__right__items a:visited {
+  color: #ffffff;
+}
+.social .social__container__right__items a:hover,
+.social .social__container__right__items a:focus {
+  color: #9c27b0;
+  transition: all 0.3s ease-in-out;
+}
+
+.social .social__container {
+  display: flex;
+}
+
+.social__container__right {
+  text-align: right;
+  float: right;
+}
+
+.social .social__container__right__items {
+  display: inline-block;
+  font-size: 1em;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  /* max-width: 900px; */
+}
+.social .social__container__right__items li {
+  display: inline-block;
+  margin: 0 12px;
+  padding: 0;
+}
+.social .social__container__right__items li a {
+  color: #ffffff;
+}
+
+.social .copyright span {
+  display: inline-block;
+  color: #6e6e6e;
+  font-size: 0.7em;
+  font-family: "poppins-regular", sans-serif;
+}
+.social .copyright span::after {
+  content: "|";
+  display: inline-block;
+  padding: 0 1em 0 1.2em;
+  color: rgba(255, 255, 255, 0.1);
+}
+.social .copyright span:last-child::after {
+  display: none;
+}
+
 /* footer {
   padding-bottom: 3rem;
   font-size: 1.4rem;
