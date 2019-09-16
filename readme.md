@@ -39,7 +39,3 @@
 - Git/Github pour le _versioning_ afin de rendre le repository public, et donc disponible pour consultation.
 
 - [Netlify](https://www.netlify.com/) car il permet un déploiement simple et efficace depuis Github par exemple, et gère le fonctionnement de formulaires via l'injection de balises additionnelles dans le HTML.
-
-Home, about, my work, contact
-
-home, about, resume, portfolio, contact
