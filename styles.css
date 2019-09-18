@@ -37,10 +37,6 @@ nav {
 }
 
 #logo {
-  /* position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); */
   animation: fill 0.5s ease forwards 3s;
 }
 
@@ -119,13 +115,14 @@ nav {
 }
 
 .home__details {
-  grid-column: 3/4;
+  /* grid-column: 3/4;
   display: flex;
   flex-direction: column;
-  align-self: center;
-}
-
-.home__details .logo {
+  align-self: center; */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .home__details__job,
@@ -917,3 +914,23 @@ footer .copyright span:last-child::after {
     display: none;
   }
 } */
+
+@media (max-width: 1024px) {
+  .page {
+    /* grid-template-columns: 5% 1fr 5%; */
+    /* grid-template-rows: 1fr; */
+    /* align-items: center; */
+  }
+  .home-details__heading {
+    margin: 0 auto;
+  }
+  .home-details__heading svg {
+    width: 500px;
+  }
+  .pages h3 {
+    font-size: 1em;
+  }
+  .page .about {
+    grid-column: 2/3;
+  }
+}
