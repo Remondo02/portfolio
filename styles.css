@@ -145,8 +145,8 @@ nav {
   box-sizing: border-box;
   display: inline-block;
   background: transparent;
-  color: #313131;
-  border: solid 3px #313131;
+  color: rgba(255, 255, 255, 0.5);
+  border: solid 3px rgba(255, 255, 255, 0.5);
   cursor: pointer;
   font-size: 1em;
   padding: 1em 1.5em;
@@ -170,8 +170,8 @@ nav {
 }
 
 .button__single:hover {
-  border-color: #9c27b0;
-  color: #9c27b0;
+  border-color: #5fa8d3;
+  color: #5fa8d3;
   transition: all 0.3s ease-in-out;
 }
 
@@ -455,8 +455,8 @@ blockquote cite a:visited {
   text-transform: uppercase;
 }
 .button__hire:hover {
-  border-color: #9c27b0;
-  color: #9c27b0;
+  border-color: #5fa8d3;
+  color: #5fa8d3;
   transition: all 0.3s ease-in-out;
 }
 
@@ -540,63 +540,71 @@ Section Portfolio
 Section Contact Form
 ***********************************/
 
-.form__container {
-  /* display: grid; */
-  /* grid-template-columns: 1fr;
-  grid-column: 2/5; */
+.container {
+  /* width: 100%; */
   display: grid;
   grid-column: 2/5;
-  /* position: absolute; */
-  /* top: 50%; */
-  /* left: 50%; */
-  /* transform: translate(-50%, -50%); */
-  /* background: white; */
-  /* padding: 40px 15%; */
-  margin: 0 15%;
-  /* box-sizing: border-box; */
-  /* border: 1px solid rgba(0, 0, 0, 0.1);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); */
+  /* flex-direction: column; */
+  /* justify-content: space-between; */
+  margin: 0 10% !important;
+  grid-template-columns: 1fr auto;
 }
-.form__container__header__flex {
+
+.form-header {
   display: flex;
   justify-content: space-between;
 }
 
-/* .form__container__header__message {
-  padding-bottom: 1.2em;
-} */
-
-.form__container input {
-  padding: 10px 0;
-  margin-bottom: 30px;
+.form:first-child {
+  margin-right: 5em;
 }
 
-.form__container textarea {
-  height: 80px;
-  padding: 10px 0;
-  margin-bottom: 40px !important;
+.form {
+  width: 100% !important;
+  position: relative;
+  height: 50px;
+  overflow: hidden;
+  margin-bottom: 2em;
+  /* margin: 0 10em; */
 }
 
-.form__container__header__name,
-.form__container__header__email {
-  width: 40%;
+.form-message {
+  width: 100% !important;
+  margin-right: 0 !important;
 }
 
-.form__container input,
-.form__container textarea {
+.form input,
+textarea {
   width: 100%;
-  box-sizing: border-box;
-  box-shadow: none;
-  outline: none;
+  height: 100%;
+  /* box-sizing: border-box; */
+  color: rgba(255, 255, 255, 0.5);
+  padding-top: 20px;
   border: none;
+  outline: none;
   border-bottom: 2px solid #6e6e6e;
   background: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 1em;
 }
 
-.form__container textarea {
-  margin-bottom: 20px;
+/* .form textarea {
+   height: 78px !important; 
+} */
+
+.form-test {
+  height: 105px;
+  padding-top: 30px !important;
 }
-.form__container input[type="submit"] {
+
+.content-name-ta {
+  position: absolute;
+  bottom: 60px !important;
+  left: 0px;
+  transition: all 0.3s ease;
+}
+
+.container input[type="submit"] {
   /* border-bottom: none;
   cursor: pointer;
   background: #9c27b0;
@@ -606,8 +614,8 @@ Section Contact Form
   box-sizing: border-box;
   display: flex;
   background: transparent;
-  color: #313131;
-  border: solid 3px #9c27b0 !important;
+  color: white;
+  border: solid 3px #5fa8d3 !important;
   cursor: pointer;
   font-size: 1em;
   padding: 1em 1.5em;
@@ -619,48 +627,60 @@ Section Contact Form
   justify-content: center;
 }
 
-.form__container input[type="submit"]:hover {
-  border-color: #9c27b0 !important;
+.container input[type="submit"]:hover {
+  border-color: #5fa8d3 !important;
   /* background-color: #9c27b0; */
   transition: all 0.3s ease-in-out;
-  color: #9c27b0;
+  color: #5fa8d3;
   filter: brightness(85%);
 }
 
-.form__container form div {
-  position: relative;
-}
-
-.form__container form div label {
+.form label {
   position: absolute;
-  top: 10px;
-  left: 0;
-  color: white;
-  transition: 0.5s;
+  bottom: 0px;
+  left: 0%;
+  width: 100%;
+  height: 100%;
   pointer-events: none;
+  border-bottom: 1px solid black;
+  color: white;
   font-size: 1em;
 }
 
-.form__container input:focus ~ label,
-.form__container textarea:focus ~ label,
-.form__container input:valid ~ label,
-.form__container textarea:valid ~ label {
-  top: -12px;
-  left: 0;
-  color: #9c27b0;
+.form label::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: -1px;
+  height: 100%;
+  width: 100%;
+  border-bottom: 3px solid #5fa8d3;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+
+.content-name {
+  position: absolute;
+  bottom: 5px;
+  left: 0px;
+  transition: all 0.3s ease;
+}
+
+.form input:focus + .label-name .content-name,
+.form textarea:focus + .label-name .content-name,
+.form textarea:valid + .label-name .content-name,
+.form input:valid + .label-name .content-name {
+  transform: translateY(-150%);
   font-size: 12px;
+  color: #5fa8d3;
   font-weight: bold;
 }
 
-.form__container input:focus,
-.form__container textarea:focus,
-.form__container input:valid,
-.form__container textarea:valid {
-  border-bottom: 2px solid #9c27b0;
-  color: white;
-  font-size: 1em;
-  letter-spacing: 0.1em;
-  font-family: "Poppins", sans-serif;
+.form input:focus + .label-name::after,
+.form textarea:focus + .label-name::after,
+.form textarea:valid + .label-name::after,
+.form input:valid + .label-name::after {
+  transform: translateX(0%);
 }
 
 /***************************
@@ -701,7 +721,7 @@ Section Contact contact
 }
 
 .contact .contact__info__icon h5 {
-  color: #9c27b0;
+  color: #5fa8d3;
   font-family: "poppins", sans-serif;
   text-transform: uppercase;
   font-size: 0.7em;
@@ -715,7 +735,7 @@ Section Contact contact
 }
 
 .contact__info h5 {
-  color: #9c27b0;
+  color: #5fa8d3;
 }
 
 .social {
@@ -734,7 +754,7 @@ Section Contact contact
 }
 .social .social__container__right__items a:hover,
 .social .social__container__right__items a:focus {
-  color: #9c27b0;
+  color: #5fa8d3;
   transition: all 0.3s ease-in-out;
 }
 
