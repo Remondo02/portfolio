@@ -125,6 +125,10 @@ nav {
   transform: translate(-50%, -50%);
 }
 
+.home-details__heading svg {
+  margin: 0 auto -0.5em !important;
+}
+
 .home__details__job,
 .home__buttons__button {
   text-align: center;
@@ -468,7 +472,7 @@ Section Portfolio
 
 .portfolio__gallery {
   display: grid;
-  grid-template-columns: repeat(2, auto);
+  grid-template-columns: repeat(2, 400px);
   justify-content: center;
   align-content: center;
   grid-column: 2/5;
@@ -485,8 +489,8 @@ Section Portfolio
 .portfolio__gallery__container img {
   overflow: hidden;
   display: flex;
-  width: 400px;
-  height: 400px;
+  width: 100%;
+  height: 100%;
   transition: 0.5s;
 }
 
@@ -916,21 +920,23 @@ footer .copyright span:last-child::after {
 } */
 
 @media (max-width: 1024px) {
-  .page {
-    /* grid-template-columns: 5% 1fr 5%; */
-    /* grid-template-rows: 1fr; */
-    /* align-items: center; */
-  }
-  .home-details__heading {
-    margin: 0 auto;
-  }
   .home-details__heading svg {
     width: 500px;
+    margin: 0 auto -1em !important;
   }
   .pages h3 {
     font-size: 1em;
   }
-  .page .about {
-    grid-column: 2/3;
+
+  .portfolio__gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .portfolio__gallery__container__content h2 {
+    font-size: 1.2em;
+  }
+  .portfolio__gallery__container__content p {
+    font-size: 0.8em;
   }
 }
