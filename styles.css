@@ -299,6 +299,7 @@ blockquote cite a:visited {
 .about__details__content__lists__single li {
   padding: 0 0 1.5rem 0;
   margin-bottom: 0.6rem;
+  list-style-type: none;
 }
 
 .about__details__content__lists__single li strong {
@@ -838,6 +839,9 @@ Navigation right
 .pages svg.active {
   opacity: 1;
 }
+.pages-icons {
+  display: none;
+}
 
 @keyframes dot {
   0% {
@@ -848,59 +852,6 @@ Navigation right
   }
 }
 
-/* footer {
-  padding-bottom: 3rem;
-  font-size: 1.4rem;
-  font-family: "poppins-regular", sans-serif;
-}
-footer a,
-footer a:visited {
-  color: #ffffff;
-}
-footer a:hover,
-footer a:focus {
-  color: #9c27b0;
-}
-footer .row {
-  max-width: 900px;
-}
-footer .social {
-  text-align: right;
-}
-footer .footer-social {
-  display: inline-block;
-  font-size: 2.1rem;
-  margin: 0;
-  padding: 0;
-  position: relative;
-  top: -0.3rem;
-}
-footer .footer-social li {
-  display: inline-block;
-  margin: 0 12px;
-  padding: 0;
-}
-footer .footer-social li a {
-  color: #ffffff;
-}
-footer .copyright span {
-  display: inline-block;
-}
-footer .copyright span::after {
-  content: "|";
-  display: inline-block;
-  padding: 0 1rem 0 1.2rem;
-  color: rgba(255, 255, 255, 0.1);
-}
-footer .copyright span:last-child::after {
-  display: none;
-}
-
-*
- * responsive:
- * footer
- * -------------------------------------------------------------------
- */
 /* @media only screen and (max-width: 768px) {
   footer {
     text-align: center;
@@ -921,7 +872,7 @@ footer .copyright span:last-child::after {
 
 @media (max-width: 1024px) {
   .home-details__heading svg {
-    width: 500px;
+    width: 450px;
     margin: 0 auto -1em !important;
   }
   .pages h3 {
@@ -938,5 +889,87 @@ footer .copyright span:last-child::after {
   }
   .portfolio__gallery__container__content p {
     font-size: 0.8em;
+  }
+  .pages-icons {
+    visibility: hidden;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-details__heading {
+    display: flex;
+    justify-content: center;
+  }
+  .home-details__heading svg {
+    width: 300px;
+    margin: 0 auto -1em !important;
+  }
+  .home__details__job {
+    font-size: 1.4em;
+  }
+  .pages h3 {
+    visibility: hidden;
+
+    /* font-size: 1em; */
+  }
+  .pages-icons {
+    display: inline-block;
+    visibility: visible;
+    position: absolute;
+    right: 25%;
+    opacity: 0.5;
+  }
+  .active {
+    opacity: 1;
+  }
+
+  .about {
+    padding-top: 6em;
+    padding-bottom: 6em;
+  }
+  .about__details__content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .about__details__content h3 {
+    text-align: center;
+  }
+  .about__details__content__lists__single {
+    text-align: center;
+    margin-bottom: 4em;
+  }
+  .about__details__contact {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 0.8em;
+  }
+
+  .contact {
+    padding-top: 6em;
+  }
+  .contact__info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    margin-bottom: 0em;
+  }
+  .contact__info__icon {
+    margin-bottom: 2em;
+  }
+
+  .social {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    padding-top: 6rem;
+  }
+  .copyright {
+    text-align: center;
+    margin-bottom: 1em;
+  }
+  .social__container__right {
+    text-align: center;
   }
 }
