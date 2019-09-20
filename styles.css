@@ -873,7 +873,7 @@ Navigation right
 @media (max-width: 1024px) {
   .home-details__heading svg {
     width: 450px;
-    margin: 0 auto -1em !important;
+    height: auto;
   }
   .pages h3 {
     font-size: 1em;
@@ -898,19 +898,18 @@ Navigation right
 @media (max-width: 768px) {
   .home-details__heading {
     display: flex;
-    justify-content: center;
+    /* align-items: center; */
+    height: auto;
   }
   .home-details__heading svg {
     width: 300px;
-    margin: 0 auto -1em !important;
+    margin-bottom: 0 !important;
   }
   .home__details__job {
     font-size: 1.4em;
   }
   .pages h3 {
     visibility: hidden;
-
-    /* font-size: 1em; */
   }
   .pages-icons {
     display: inline-block;
@@ -922,7 +921,6 @@ Navigation right
   .active {
     opacity: 1;
   }
-
   .about {
     padding-top: 6em;
     padding-bottom: 6em;
@@ -932,7 +930,6 @@ Navigation right
     flex-direction: column;
     width: 100%;
   }
-
   .about__details__content h3 {
     text-align: center;
   }
@@ -947,7 +944,6 @@ Navigation right
     width: 100%;
     font-size: 0.8em;
   }
-
   .contact {
     padding-top: 6em;
   }
@@ -959,7 +955,6 @@ Navigation right
   .contact__info__icon {
     margin-bottom: 2em;
   }
-
   .social {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -971,5 +966,27 @@ Navigation right
   }
   .social__container__right {
     text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-details__heading svg {
+    width: 250px;
+  }
+  .portfolio {
+    display: flex;
+    width: 100% !important;
+  }
+  .portfolio__gallery__container img {
+    width: 100vw;
+  }
+  .portfolio__gallery__container__content h2 {
+    font-size: 1.4em;
+  }
+  .portfolio__gallery__container__content p {
+    font-size: 1em;
+  }
+  .form-header {
+    flex-direction: column;
   }
 }
