@@ -811,6 +811,7 @@ Section Contact contact
   }
   .social__container__right {
     text-align: center;
+    grid-row: 1;
   }
 }
 
@@ -956,7 +957,6 @@ nav {
 .toggle .line3 {
   transform: rotate(45deg) translate(-5px, -7px);
 }
-
 #lightbox {
   position: fixed;
   z-index: 1000;
@@ -966,21 +966,16 @@ nav {
   background-color: rgba(0, 0, 0, 0.8);
   display: none;
 }
-
 #lightbox.active {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-
 #lightbox img {
   max-height: 90%;
   max-width: 80%;
   padding: 4px;
   background-color: black;
   border: 2px solid white;
-}
-
-#lightbox content {
 }
