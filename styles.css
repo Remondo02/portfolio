@@ -971,12 +971,16 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 #lightbox img {
-  max-width: 90%;
-  max-height: 80%;
+  max-height: 90%;
+  max-width: 80%;
   padding: 4px;
   background-color: black;
   border: 2px solid white;
+}
+
+#lightbox content {
 }

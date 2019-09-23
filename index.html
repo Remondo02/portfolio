@@ -122,9 +122,7 @@
                   <aside class="quote">
                     <blockquote>
                       <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Error vero libero distinctio facere ratione beatae
-                        laboriosam animi ullam impedit rerum.
+                          C'est bien dans l'effort que l'on trouve la satisfaction et non dans la réussite. Un plein effort est une pleine victoire.
                       </p>
                       <cite>Ghandi</cite>
                     </blockquote>
@@ -211,6 +209,7 @@
                     officiis, rem asperiores accusantium voluptatem. Magnam odio
                     voluptates, quo quasi eius recusandae ab? Cumque.
                   </p>
+                  <!-- <div class="details"><a href="" class="button__hire button__hire--img" title="portfolio">Details1</a></div> -->
                 </div>
               </div>
               <div class="portfolio__gallery__container">
@@ -226,6 +225,7 @@
                     veritatis in impedit delectus dolorum commodi earum soluta?
                     Corrupti?
                   </p>
+                  <!-- <div class="details"><a href="" class="button__hire button__hire--img" title="portfolio">Details2</a></div> -->
                 </div>
               </div>
               <div class="portfolio__gallery__container">
@@ -240,6 +240,7 @@
                     repudiandae porro quis sunt aliquam fugit deserunt pariatur?
                     Facilis quae nisi, exercitationem inventore harum sit et.
                   </p>
+                  <!-- <div class="details"><a href="" class="button__hire button__hire--img" title="portfolio">Details3</a></div> -->
                 </div>
               </div>
               <div class="portfolio__gallery__container">
@@ -254,6 +255,7 @@
                     nihil sapiente alias autem obcaecati magni ad sed numquam,
                     quod sunt facere est.
                   </p>
+                  <!-- <div class="details"><a href="" class="button__hire button__hire--img" title="portfolio">Details4</a></div> -->
                 </div>
               </div>
             </div>
@@ -288,7 +290,11 @@
               </div>
             </div>
             <div class="container">
-              <form action="" method="post">
+              <form action="" method="post" 
+              netlify-honeypot="bot-field" data-netlify="true">
+                <p class="hidden">
+                    <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+                </p>
                 <div class="form-header">
                   <div class="form">
                     <input
@@ -303,8 +309,8 @@
                   </div>
                   <div class="form">
                     <input
-                      type="text"
-                      name="name"
+                      type="email"
+                      name="email"
                       autocomplete="off"
                       required
                     />
@@ -317,7 +323,7 @@
                   <div class="form form-message">
                     <input
                       type="text"
-                      name="name"
+                      name="subject"
                       autocomplete="off"
                       required
                     />
