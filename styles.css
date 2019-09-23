@@ -679,11 +679,12 @@ Section Contact contact
 .social {
   display: grid;
   grid-column: 2/5;
-  grid-template-columns: repeat(2, auto);
+  grid-template-columns: repeat(3, auto);
   padding: 4.8em 0 1em;
   font-size: 1.4rem;
   font-family: "poppins-regular", sans-serif;
   justify-content: space-around;
+  align-items: center;
 }
 .social .social__container__right__items a,
 .social .social__container__right__items a:visited {
@@ -746,6 +747,15 @@ Section Contact contact
   .portfolio__gallery__container__content p {
     font-size: 0.8em;
   }
+  .social .copyright span::after {
+    padding: 0 6px 0 10px;
+  }
+  .social .social__container__right__items li {
+    margin: 0 6px;
+  }
+  .flag {
+    margin: 0 6px !important;
+  }
 }
 
 @media (max-width: 768px) {
@@ -807,11 +817,17 @@ Section Contact contact
   }
   .copyright {
     text-align: center;
-    margin-bottom: 1em;
   }
   .social__container__right {
     text-align: center;
     grid-row: 1;
+    margin-bottom: 1em;
+  }
+  .languages {
+    text-align: center;
+  }
+  .flag {
+    margin-top: 1em !important;
   }
 }
 
@@ -831,6 +847,9 @@ Section Contact contact
   }
   .portfolio__gallery__container__content p {
     font-size: 1em;
+  }
+  .flag {
+    margin-top: 1em !important;
   }
 }
 
@@ -935,6 +954,7 @@ nav {
     display: block;
   }
 }
+
 .nav-active {
   transform: translateX(0%);
 }
@@ -978,4 +998,20 @@ nav {
   padding: 4px;
   background-color: black;
   border: 2px solid white;
+}
+.flag {
+  width: 25px;
+  display: inline-block;
+  font-size: 1em;
+  margin: 0 12px;
+  padding: 0;
+  position: relative;
+}
+.languages svg:hover {
+  stroke: white;
+  fill: #5fa8d3;
+  stroke-opacity: 0.5;
+  stroke-width: 15;
+  fill-opacity: 0.8;
+  transition: all 0.3s ease-in;
 }
