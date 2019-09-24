@@ -54,3 +54,122 @@ lightbox.addEventListener('click', e => {
   }
   lightbox.classList.remove('active');
 })
+
+
+function splitScroll() {
+
+  const controller = new ScrollMagic.Controller();
+
+  new ScrollMagic.Scene({
+    triggerElement: '.about',
+  })
+    .setClassToggle('.about__details__heading', 'fade-in')
+    // .addIndicators({
+    //   name: 'fade about',
+    //   colorTrigger: 'black',
+    //   indent: 200,
+    //   colorStart: '#75c695'
+    // })
+    .addTo(controller);
+
+  new ScrollMagic.Scene({
+    triggerElement: 'blockquote'
+  })
+    .setClassToggle('.about__details__content', 'fade-in')
+    // .addIndicators({
+    //   name: 'fade content',
+    //   colorTrigger: 'black',
+    //   indent: 200,
+    //   colorStart: '#75c695'
+    // })
+    .addTo(controller);
+
+  new ScrollMagic.Scene({
+    triggerElement: '.percent50',
+    triggerHook: 0.4
+  })
+    .setClassToggle('.about__details__contact', 'fade-in')
+    // .addIndicators({
+    //   name: 'fade hire',
+    //   colorTrigger: 'black',
+    //   indent: 200,
+    //   colorStart: '#75c695'
+    // })
+    .addTo(controller);
+
+  new ScrollMagic.Scene({
+    triggerElement: '.about__details__contact',
+    triggerHook: 0.2
+  })
+    .setClassToggle('.portfolio__gallery', 'fade-in')
+    // .addIndicators({
+    //   name: 'fade portfolio',
+    //   colorTrigger: 'black',
+    //   indent: 200,
+    //   colorStart: '#75c695'
+    // })
+    .addTo(controller);
+
+  new ScrollMagic.Scene({
+    triggerElement: '.contact'
+  })
+    .setClassToggle('.contact__info', 'fade-in')
+    // .addIndicators({
+    //   name: 'fade contact info',
+    //   colorTrigger: 'black',
+    //   indent: 200,
+    //   colorStart: '#75c695'
+    // })
+    .addTo(controller);
+
+  new ScrollMagic.Scene({
+    triggerElement: '.contact__info'
+  })
+    .setClassToggle('.form-content', 'fade-in')
+    // .addIndicators({
+    //   name: 'fade form',
+    //   colorTrigger: 'black',
+    //   indent: 200,
+    //   colorStart: '#75c695'
+    // })
+    .addTo(controller);
+
+  new ScrollMagic.Scene({
+    triggerElement: '.contact__info'
+  })
+    .setClassToggle('.form-header', 'fade-in')
+    // .addIndicators({
+    //   name: 'fade form-header',
+    //   colorTrigger: 'black',
+    //   indent: 350,
+    //   colorStart: '#75c695'
+    // })
+    .addTo(controller);
+
+  new ScrollMagic.Scene({
+    triggerElement: '.form-message'
+  })
+    .setClassToggle('input[type="submit"]', 'fade-in')
+    // .addIndicators({
+    //   name: 'fade submit',
+    //   colorTrigger: 'black',
+    //   indent: 350,
+    //   colorStart: '#75c695'
+    // })
+    .addTo(controller);
+
+  new ScrollMagic.Scene({
+    triggerElement: '.form-message',
+    triggerHook: 0.4
+  })
+    .setClassToggle('.social', 'fade-in')
+    // .addIndicators({
+    //   name: 'fade social',
+    //   colorTrigger: 'black',
+    //   indent: 500,
+    //   colorStart: '#75c695'
+    // })
+    .addTo(controller);
+}
+
+splitScroll();

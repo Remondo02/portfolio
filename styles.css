@@ -196,6 +196,7 @@ Section About
 .about__details {
   grid-column: 2/5;
 }
+
 .about__details__heading img {
   height: 10em;
   width: 10em;
@@ -997,4 +998,51 @@ nav {
   padding: 4px;
   background-color: black;
   border: 2px solid white;
+}
+
+/****************************
+Smooth Scroll
+************************/
+
+.about__details__heading.fade-in,
+.about__details__content.fade-in,
+.portfolio__gallery.fade-in,
+.contact__info.fade-in,
+.form-content.fade-in,
+.form-header.fade-in {
+  opacity: 1;
+  transform: translateX(0px);
+}
+.about__details__content,
+.contact__info {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: all 1s ease-out;
+}
+.about__details__contact,
+input[type="submit"] {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease-out;
+}
+
+.about__details__contact.fade-in,
+input[type="submit"].fade-in {
+  opacity: 1;
+  transform: translateY(0px);
+}
+.about__details__heading,
+.portfolio__gallery,
+.form-content,
+.form-header {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 1s ease-out;
+}
+.social {
+  opacity: 0;
+  transition: all 1s ease-out;
+}
+.social.fade-in {
+  opacity: 1;
 }
