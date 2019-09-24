@@ -453,7 +453,7 @@ Section Portfolio
 }
 .portfolio__gallery {
   display: grid;
-  grid-template-columns: repeat(2, 400px);
+  grid-template-columns: repeat(2, auto);
   justify-content: center;
   align-content: center;
   grid-column: 2/5;
@@ -742,6 +742,15 @@ Section Contact contact
   .portfolio__gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+  .portfolio__gallery__container img {
+    overflow: hidden;
+    display: flex;
+    transition: 0.5s;
+    width: 100%;
+    object-fit: cover;
+    background-size: cover;
+    margin: 0 auto;
   }
   .portfolio__gallery__container__content h2 {
     font-size: 1.2em;
