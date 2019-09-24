@@ -466,10 +466,12 @@ Section Portfolio
 .portfolio__gallery__container img {
   overflow: hidden;
   display: flex;
-  width: 100%;
-  height: 100%;
+  height: 400px;
+  width: 400px;
   transition: 0.5s;
   cursor: pointer;
+  object-fit: cover;
+  background-size: center;
 }
 .portfolio__gallery__container:hover img {
   opacity: 0.2;
@@ -863,14 +865,14 @@ nav {
 }
 .logo {
   color: rgb(219, 218, 218);
-  text-transform: uppercase;
-  letter-spacing: 5px;
-  font-size: 20px;
+  letter-spacing: 2px;
+  font-size: 1.2em;
+  font-family: "Poppins", sans-serif;
 }
 .nav-links {
   display: flex;
   justify-content: space-around;
-  width: 30%;
+  width: 40%;
 }
 .nav-links li {
   list-style: none;
@@ -878,9 +880,15 @@ nav {
 .nav-links a {
   color: rgb(219, 218, 218);
   text-decoration: none;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
   font-weight: bold;
   font-size: 14px;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-links a:active,
+.nav-links a:hover {
+  color: #5fa8d3;
 }
 .burger {
   display: none;
@@ -896,7 +904,7 @@ nav {
 
 @media screen and (max-width: 1024px) {
   .nav-links {
-    width: 60%;
+    width: 55%;
   }
 }
 
