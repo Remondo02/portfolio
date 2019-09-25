@@ -7,7 +7,7 @@
 3. Git Bash ;
 4. HTML5 ;
 5. CSS 3 ;
-6. Javascript (ES 6+) & GSAP ;
+6. Javascript (ES 6+), GSAP, ScrollMagic & smooth-scroll ;
 7. PHP 7.2 ;
 8. Git/Github ;
 9. Netlify.
@@ -27,15 +27,18 @@
 - CSS 3 sans passer par SASS, car pour des raisons de simplicité et de temps, cela me semblait plus adapté. Pas besoin de compiler, et donc de surcharger l'application avec une configuration additionnelle ([Webpack](https://webpack.js.org/) & [NPM](https://www.npmjs.com/), ou autre).
   Le fichier CSS est long mais enrichi de commentaires afin de distinguer les différents éléments qui le composent.
 
-- Javascript (ES 6+) sans devoir recourir à Jquery pour deux raisons :
+- Javascript (ES 6+) afin d'utiliser le langage original et pour de bonnes pratiques.
 
-  1. cela évite de surcharger le site par l'ajout de librairies relativement lourdes ;
-  2. afin de pratiquer le langage original, sans raccourcis, pour de bonnes pratiques.
+- [GSAP](https://greensock.com/gsap/) qui regroupe un ensemble d'outils formidables pour l'animation scriptée d'éléments.
 
-- [GSAP](https://greensock.com/gsap/), qui regroupe un ensemble d'outils formidables pour l'animation scriptée d'éléments.
+- [ScrollMagic](https://scrollmagic.io/), une librairie simple et pratique pour l'animation d'élément au défilement.
+
+- [Smooth-scroll](https://github.com/cferdinandi/smooth-scroll), autre libraire pour un défilement fluide sans passer par la propriété « scroll-behavior » de CSS qui n'est malheureusement pas encore compatible sur tout les navigateurs (notamment Safari).
 
 - PHP afin de rendre le site multilangue (ce qui justifie l'utilisation d'Apache en première instance).
 
 - Git/Github pour le _versioning_ afin de rendre le repository public, et donc disponible pour consultation.
 
 - [Netlify](https://www.netlify.com/) car il permet un déploiement simple et efficace depuis Github par exemple, et gère le fonctionnement de formulaires via l'injection de balises additionnelles dans le HTML.
+
+Note : la version dite « dynamique » utilisant PHP se trouve dans la branche « languages » du repository, car Netlify ne prend pas en charge Apache et PHP.
