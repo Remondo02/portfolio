@@ -12,12 +12,22 @@ function init() {
           scale: .5,
           ease: Power2.easeOut
         })
-          .staggerFrom('.home__details__job, .icons', 2, {
+          .staggerFrom('.home__details__job', 1, {
             opacity: 0,
             y: -40,
             ease: Power2.easeInOut
           }, 0.5, "+=1")
-          .fromTo('nav', 1, { y: '-100%' }, { y: '0%' })
+          .staggerFrom('.icons, a', 1, {
+            opacity: 0,
+            y: -40,
+            ease: Power2.easeInOut
+          }, 0.2, "-=2")
+          .fromTo('nav', 1, { y: '-100%' }, { y: '0%' }, "-=2")
+          .staggerFrom('.logo, .nav-links li', 1, {
+            opacity: 0,
+            y: -40,
+            ease: Power2.easeInOut
+          }, 0.2, "-=2")
       }
 
       homeTimeline();
