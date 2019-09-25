@@ -1100,3 +1100,6 @@ input[type="submit"].fade-in {
 .hidden {
   opacity: 0;
 }
+.hidden input {
+  cursor: context-menu;
+}
