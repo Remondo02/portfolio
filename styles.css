@@ -1058,7 +1058,6 @@ input[type="submit"].fade-in {
 .social.fade-in {
   opacity: 1;
 }
-
 .portfolio__gallery__container__content .details {
   margin: 0 0 10px;
   padding: 0;
@@ -1074,7 +1073,6 @@ input[type="submit"].fade-in {
   transform: translateX(0);
   transition-delay: 0.3s;
 }
-
 .button__hire--img {
   border-color: #5fa8d3;
   color: white;
@@ -1084,12 +1082,10 @@ input[type="submit"].fade-in {
   padding-left: 1em;
   letter-spacing: 1px;
 }
-
 .button__hire--img:hover {
   border-color: #5fa8d3;
   background-color: rgba(0, 0, 0, 0.8);
 }
-
 .button__hire--img::after {
   display: inline-block;
   content: "\f09b";
@@ -1100,4 +1096,7 @@ input[type="submit"].fade-in {
   position: relative;
   left: 0.5em;
   vertical-align: middle;
+}
+.hidden {
+  opacity: 0;
 }
