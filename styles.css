@@ -575,6 +575,7 @@ textarea {
   font-size: 1em;
   padding: 1em 1.5em;
   text-decoration: none;
+  font-family: "Poppins", sans-serif;
   font-weight: bold;
   text-transform: uppercase;
   width: 250px;
@@ -759,6 +760,9 @@ Section Contact contact
   .portfolio__gallery__container__content p {
     font-size: 0.8em;
   }
+  .button__hire--img {
+    width: 70% !important;
+  }
 }
 
 @media (max-width: 768px) {
@@ -825,6 +829,12 @@ Section Contact contact
     text-align: center;
     grid-row: 1;
     margin-bottom: 1em;
+  }
+  .portfolio__gallery__container__content h2 {
+    font-size: 1.4em;
+  }
+  .portfolio__gallery__container__content p {
+    font-size: 0.8em;
   }
 }
 
@@ -1047,4 +1057,47 @@ input[type="submit"].fade-in {
 }
 .social.fade-in {
   opacity: 1;
+}
+
+.portfolio__gallery__container__content .details {
+  margin: 0 0 10px;
+  padding: 0;
+  color: white;
+  transition: 0.5s;
+  transform: translateX(-50px);
+  opacity: 0;
+  visibility: hidden;
+}
+.portfolio__gallery__container__content:hover .details {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+  transition-delay: 0.3s;
+}
+
+.button__hire--img {
+  border-color: #5fa8d3;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 50%;
+  margin: 15px auto 0;
+  padding-left: 1em;
+  letter-spacing: 1px;
+}
+
+.button__hire--img:hover {
+  border-color: #5fa8d3;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.button__hire--img::after {
+  display: inline-block;
+  content: "\f09b";
+  font-family: fontAwesome;
+  font-size: 1.6rem;
+  line-height: inherit;
+  text-align: center;
+  position: relative;
+  left: 0.5em;
+  vertical-align: middle;
 }
