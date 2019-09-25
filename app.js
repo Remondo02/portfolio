@@ -17,17 +17,12 @@ function init() {
             y: -40,
             ease: Power2.easeInOut
           }, 0.5, "+=1")
-          .staggerFrom('.icons, a', 1, {
+          .staggerFrom('.icons a', 1, {
             opacity: 0,
             y: -40,
             ease: Power2.easeInOut
-          }, 0.2, "-=2")
-          .fromTo('nav', 1, { y: '-100%' }, { y: '0%' }, "-=2")
-          .staggerFrom('.logo, .nav-links li', 1, {
-            opacity: 0,
-            y: -40,
-            ease: Power2.easeInOut
-          }, 0.2, "-=2")
+          }, 0.2, "-=0.5")
+          .staggerFrom('nav', 1, { opacity: 0, y: '-100%' }, { opacity: 100, y: '0%' }, "-=0.5")
       }
 
       homeTimeline();
@@ -89,7 +84,6 @@ function init() {
 
         new ScrollMagic.Scene({
           triggerElement: '.form-message',
-          triggerHook: 0.4
         })
           .setClassToggle('.social', 'fade-in')
           .addTo(controller);
