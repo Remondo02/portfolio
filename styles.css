@@ -1011,6 +1011,7 @@ Lightbox
   position: fixed;
   z-index: 1000;
   top: 0;
+  right: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
@@ -1036,7 +1037,6 @@ Lightbox
   padding: 0;
   color: white;
 }
-
 #lightbox p {
   text-align: center;
   max-width: 60%;
@@ -1044,17 +1044,80 @@ Lightbox
   color: white;
   font-size: 1.2em;
 }
-
 #lightbox .details {
   justify-content: center;
   max-width: 50%;
   min-width: 30%;
   text-align: center;
 }
-
 #lightbox .button__hire--img {
   visibility: visible;
   display: block;
+}
+
+@media (max-width: 1024px) {
+  #lightbox h2 {
+    font-size: 3em;
+    margin: 1em 0 1em;
+  }
+  #lightbox p {
+    font-size: 1.8em;
+    margin-bottom: 1em;
+  }
+  #lightbox .details {
+    width: 80%;
+  }
+  #lightbox .button__hire--img {
+    width: 100% !important;
+    font-size: 1.8em;
+  }
+}
+
+@media (max-width: 768px) {
+  #lightbox p {
+    font-size: 1.4em;
+  }
+  #lightbox .details {
+    width: 80%;
+  }
+  #lightbox .button__hire--img {
+    font-size: 1.4em;
+  }
+}
+
+@media (max-width: 480px) {
+  #lightbox img {
+    max-height: 90%;
+    max-width: 80%;
+    padding: 4px;
+    background-color: black;
+    border: 2px solid white;
+    margin-bottom: 1.2em;
+  }
+  #lightbox h2 {
+    font-size: 2em;
+    margin: 0.75em 0 0.75em;
+  }
+  #lightbox p {
+    max-width: 80%;
+  }
+  #lightbox .details {
+    justify-content: center;
+    max-width: 100% !important;
+    margin: 0 !important;
+  }
+  #lightbox .button__hire--img {
+    width: 100% !important;
+  }
+  #lightbox p {
+    font-size: 1em;
+  }
+  #lightbox .details {
+    width: 80%;
+  }
+  #lightbox .button__hire--img {
+    font-size: 1em;
+  }
 }
 
 /****************************
@@ -1149,4 +1212,10 @@ input[type="submit"].fade-in {
 }
 .hidden input {
   cursor: context-menu;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body {
+    animation: none;
+  }
 }

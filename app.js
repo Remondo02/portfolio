@@ -170,21 +170,4 @@ function init() {
   });
 }
 
-var getSiblings = function (el) {
-  var siblings = [];
-  var sibling = el.parentNode.firstChild;
-  for (; sibling; sibling = sibling.nextSibling) {
-    if (sibling.nodeType !== 1 || sibling === el) continue;
-    siblings.push(sibling);
-  }
-  return siblings;
-};
-
-var el = document.querySelector('.portfolio__gallery__container img');
-var siblings = getSiblings(el);
-
 init();
-
-
-
-
