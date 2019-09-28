@@ -84,6 +84,7 @@ function init() {
 
         new ScrollMagic.Scene({
           triggerElement: '.form-message',
+          triggerHook: 0.6
         })
           .setClassToggle('.social', 'fade-in')
           .addTo(controller);

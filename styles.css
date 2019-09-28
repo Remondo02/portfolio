@@ -9,9 +9,10 @@ Section Home
   margin: 0;
   box-sizing: border-box;
 }
+
 body {
   width: 100%;
-  height: 100vh;
+  /* height: 100vh; */
   background-color: rgb(32, 35, 48);
   font-family: "Poppins", sans-serif;
 }
@@ -855,6 +856,10 @@ Section Contact contact
   .portfolio__gallery__container__content p {
     font-size: 1em;
   }
+  .copyright {
+    width: 75%;
+    margin: 0 auto;
+  }
 }
 
 /****************************
@@ -929,7 +934,11 @@ nav {
 }
 
 @media screen and (max-width: 768px) {
+  html {
+    overflow-x: hidden;
+  }
   body {
+    /* position: relative; */
     overflow-x: hidden;
   }
   .nav-links {
