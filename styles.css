@@ -502,13 +502,13 @@ Section Portfolio
   margin: 0;
   padding: 0;
   color: white;
-  transition: 0.5s;
-  transform: translateX(50px);
-  opacity: 0;
+  /* transition: 0.5s; */
+  /* transform: translateX(50px); */
+  /* opacity: 0; */
   visibility: hidden;
+  display: none;
 }
-.portfolio__gallery__container__content:hover h2,
-.portfolio__gallery__container__content:hover p {
+.portfolio__gallery__container__content:hover h2 {
   opacity: 1;
   visibility: visible;
   transform: translateX(0);
@@ -860,6 +860,10 @@ Section Contact contact
     width: 75%;
     margin: 0 auto;
   }
+  .social .copyright span::after {
+    content: "";
+    display: none;
+  }
 }
 
 /****************************
@@ -998,6 +1002,11 @@ nav {
   border-radius: 2px;
   transform: rotate(45deg) translate(-5px, -7px);
 }
+
+/********************************
+Lightbox
+******************************/
+
 #lightbox {
   position: fixed;
   z-index: 1000;
@@ -1014,11 +1023,38 @@ nav {
   flex-direction: column;
 }
 #lightbox img {
-  max-height: 90%;
-  max-width: 80%;
+  max-height: 60%;
+  max-width: 60%;
   padding: 4px;
   background-color: black;
   border: 2px solid white;
+  margin-bottom: 1.2em;
+}
+#lightbox h2 {
+  font-size: 2em;
+  margin: 0 0 10px;
+  padding: 0;
+  color: white;
+}
+
+#lightbox p {
+  text-align: center;
+  max-width: 60%;
+  margin: 0 auto 10px;
+  color: white;
+  font-size: 1.2em;
+}
+
+#lightbox .details {
+  justify-content: center;
+  max-width: 50%;
+  min-width: 30%;
+  text-align: center;
+}
+
+#lightbox .button__hire--img {
+  visibility: visible;
+  display: block;
 }
 
 /****************************
@@ -1090,6 +1126,8 @@ input[type="submit"].fade-in {
   margin: 15px auto 0;
   padding-left: 1em;
   letter-spacing: 1px;
+  visibility: hidden;
+  display: none;
 }
 .button__hire--img:hover {
   border-color: #5fa8d3;

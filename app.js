@@ -135,7 +135,13 @@ function init() {
         document.body.appendChild(lightbox);
 
         const images = document.querySelectorAll('.portfolio__gallery__container img');
+
         images.forEach(image => {
+          const titles = image.parentElement.parentElement.childNodes[3].firstElementChild;
+          const content =
+            image.parentElement.parentElement.childNodes[3].childNodes[3];
+          const link = image.parentElement.parentElement.childNodes[3].childNodes[5];
+
           image.addEventListener('click', e => {
             lightbox.classList.add('active');
             const img = document.createElement('img');
@@ -144,6 +150,9 @@ function init() {
               lightbox.removeChild(lightbox.firstChild)
             }
             lightbox.appendChild(img);
+            lightbox.appendChild(titles);
+            lightbox.appendChild(content);
+            lightbox.appendChild(link);
           })
         })
 
@@ -161,4 +170,21 @@ function init() {
   });
 }
 
+var getSiblings = function (el) {
+  var siblings = [];
+  var sibling = el.parentNode.firstChild;
+  for (; sibling; sibling = sibling.nextSibling) {
+    if (sibling.nodeType !== 1 || sibling === el) continue;
+    siblings.push(sibling);
+  }
+  return siblings;
+};
+
+var el = document.querySelector('.portfolio__gallery__container img');
+var siblings = getSiblings(el);
+
 init();
+
+
+
+
