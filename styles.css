@@ -856,6 +856,9 @@ Section Contact contact
   .portfolio__gallery__container__content p {
     font-size: 1em;
   }
+  .about__details__contact .button {
+    width: auto;
+  }
   .copyright {
     width: 75%;
     margin: 0 auto;
@@ -893,10 +896,12 @@ nav {
   background-blend-mode: multiply, multiply;
 }
 .logo {
-  color: white;
   letter-spacing: 1px;
   font-size: 20px;
   font-family: "Poppins", sans-serif;
+}
+.logo__svg svg {
+  width: 2.5em;
 }
 .nav-links {
   display: flex;

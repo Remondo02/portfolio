@@ -77,7 +77,8 @@ function init() {
           .addTo(controller);
 
         new ScrollMagic.Scene({
-          triggerElement: '.form-message'
+          triggerElement: '.form-message',
+          triggerHook: 0.6
         })
           .setClassToggle('input[type="submit"]', 'fade-in')
           .addTo(controller);
