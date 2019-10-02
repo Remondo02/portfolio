@@ -55,6 +55,8 @@ body {
   display: grid;
   grid-template-columns: 5% 1fr 1fr 1fr 5%;
 }
+
+/*
 #logo path:nth-child(1) {
   stroke-dasharray: 226.9439697265625px;
   stroke-dashoffset: 226.9439697265625px;
@@ -107,7 +109,8 @@ body {
   to {
     fill: white;
   }
-}
+} */
+
 .home {
   overflow: hidden;
   height: 500px;
@@ -453,6 +456,7 @@ Section Portfolio
 .portfolio {
   padding-top: 10vh !important;
 }
+
 .portfolio__gallery {
   display: grid;
   grid-template-columns: repeat(2, auto);
@@ -1223,4 +1227,52 @@ input[type="submit"].fade-in {
   body {
     animation: none;
   }
+}
+
+/**************************
+IE 
+**********************/
+.ie nav {
+  height: 10vh;
+}
+.ie .page {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+}
+.ie #logo {
+  fill: white;
+}
+.ie .about__details {
+  width: 90%;
+}
+.ie .about__details__content {
+  display: flex;
+  justify-content: space-between;
+}
+.ie .about__details__content__skills {
+  width: 70%;
+}
+.ie .portfolio__gallery {
+  display: flex;
+  flex-direction: row;
+}
+.ie .contact__info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.ie .contact__info {
+  width: 100%;
+}
+.ie .container {
+  width: 75vw;
+}
+.ie .social {
+  width: 50vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
