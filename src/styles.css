@@ -56,7 +56,6 @@ body {
   grid-template-columns: 5% 1fr 1fr 1fr 5%;
 }
 
-/*
 #logo path:nth-child(1) {
   stroke-dasharray: 226.9439697265625px;
   stroke-dashoffset: 226.9439697265625px;
@@ -109,7 +108,7 @@ body {
   to {
     fill: white;
   }
-} */
+}
 
 .home {
   overflow: hidden;
@@ -1022,46 +1021,69 @@ Lightbox
   top: 0;
   right: 0;
   width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-  display: none;
-}
-#lightbox.active {
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  visibility: hidden;
+  opacity: 0;
 }
-#lightbox img {
+#lightbox.active {
+  visibility: visible;
+  opacity: 1;
+  cursor: pointer;
+}
+#lbContainer {
+  background-color: rgba(255, 255, 255, 0.9);
+  width: 60%;
+  height: 80%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  padding: 3em 5em;
+  box-shadow: 1px 1px 15px 5px rgba(0, 0, 0, 0.2);
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-50px);
+  transition: visibility 0s, opacity 0.5s, transform 1s ease;
+  cursor: auto;
+}
+#lbContainer.active {
+  transform: translateY(0px);
+  visibility: visible;
+  opacity: 1;
+}
+#lbContainer img {
   max-height: 60%;
-  max-width: 60%;
+  max-width: 80%;
   padding: 4px;
-  background-color: black;
-  border: 2px solid white;
+  border: 2px solid black;
   margin-bottom: 1.2em;
 }
-#lightbox h2 {
+#lbContainer h2 {
   font-size: 2em;
   margin: 0 0 10px;
   padding: 0;
-  color: white;
+  color: black;
 }
-#lightbox p {
+#lbContainer p {
   text-align: center;
-  max-width: 60%;
+  max-width: 80%;
   margin: 0 auto 10px;
-  color: white;
   font-size: 1.2em;
 }
-#lightbox .details {
-  justify-content: center;
+#lbContainer .details {
+  /* justify-content: center;
   max-width: 50%;
   min-width: 30%;
-  text-align: center;
+  text-align: center; */
 }
-#lightbox .button__hire--img {
+#lbContainer .button__hire--img {
   visibility: visible;
   display: block;
+  width: auto;
 }
 
 @media (max-width: 1024px) {
@@ -1242,6 +1264,19 @@ IE
   justify-content: center;
   align-items: center;
 }
+
+.ie #logo path:nth-child(1),
+.ie #logo path:nth-child(2),
+.ie #logo path:nth-child(3),
+.ie #logo path:nth-child(4),
+.ie #logo path:nth-child(5),
+.ie #logo path:nth-child(6),
+.ie #logo path:nth-child(7),
+.ie #logo path:nth-child(8) {
+  stroke-dasharray: 10000;
+  animation: unset !important;
+}
+
 .ie #logo {
   fill: white;
 }
