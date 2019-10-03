@@ -1072,7 +1072,7 @@ Lightbox
   text-align: center;
   max-width: 80%;
   margin: 0 auto 10px;
-  font-size: 1.2em;
+  font-size: 1.1em;
 }
 #lbContainer .details {
   /* justify-content: center;
@@ -1087,67 +1087,92 @@ Lightbox
 }
 
 @media (max-width: 1024px) {
-  #lightbox h2 {
+  #lbContainer {
+    padding: 3em;
+  }
+  #lbContainer img {
+    margin-bottom: 0;
+  }
+  #lbContainer h2 {
     font-size: 3em;
-    margin: 1em 0 1em;
+    margin: 1em 0;
   }
-  #lightbox p {
-    font-size: 1.8em;
-    margin-bottom: 1em;
+  #lbContainer p {
+    font-size: 1.6em;
+    margin-bottom: 0;
   }
-  #lightbox .details {
+  #lbContainer .details {
     width: 80%;
   }
-  #lightbox .button__hire--img {
-    width: 100% !important;
+  #lbContainer .button__hire--img {
+    width: 100%;
     font-size: 1.8em;
+    text-align: center;
+    margin: 1em auto 0;
   }
 }
 
 @media (max-width: 768px) {
-  #lightbox p {
-    font-size: 1.4em;
+  #lbContainer {
+    padding: 2em;
   }
-  #lightbox .details {
+  #lbContainer img {
+    margin-bottom: 0;
+  }
+  #lbContainer h2 {
+    font-size: 2.5em;
+    margin: 0.3em 0 !important;
+  }
+  #lbContainer p {
+    font-size: 1.3em !important;
+    margin: 0;
+  }
+  #lbContainer .details {
     width: 80%;
   }
-  #lightbox .button__hire--img {
+  #lbContainer .button__hire--img {
     font-size: 1.4em;
+    margin: 1em auto 0;
   }
 }
 
 @media (max-width: 480px) {
-  #lightbox img {
-    max-height: 90%;
+  #lbContainer {
+    width: 100%;
+    height: 100vh;
+  }
+  #lbContainer img {
+    max-height: 50%;
     max-width: 80%;
     padding: 4px;
     background-color: black;
-    border: 2px solid white;
-    margin-bottom: 1.2em;
+    border: 2px solid rgb(163, 58, 58);
+    margin-bottom: 0;
   }
-  #lightbox h2 {
-    font-size: 2em;
-    margin: 0.75em 0 0.75em;
+  #lbContainer h2 {
+    font-size: 2em !important;
+    margin: 0.3em 0 !important;
   }
-  #lightbox p {
-    max-width: 80%;
+  #lbContainer p {
+    max-width: 80% !important;
   }
-  #lightbox .details {
-    justify-content: center;
+  #lbContainer .details {
+    justify-content: center !important;
     max-width: 100% !important;
     margin: 0 !important;
   }
-  #lightbox .button__hire--img {
+  #lbContainer .button__hire--img {
     width: 100% !important;
   }
-  #lightbox p {
-    font-size: 1em;
+  #lbContainer p {
+    font-size: 1em !important;
   }
-  #lightbox .details {
-    width: 80%;
+  #lbContainer .details {
+    width: 80% !important;
   }
-  #lightbox .button__hire--img {
-    font-size: 1em;
+  #lbContainer .button__hire--img {
+    font-size: 1em !important;
+    margin: 0;
   }
 }
 
