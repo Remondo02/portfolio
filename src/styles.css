@@ -458,10 +458,12 @@ Section Portfolio
 
 .portfolio__gallery {
   display: grid;
-  grid-template-columns: repeat(2, auto);
+  /* grid-template-columns: repeat(2, auto); */
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   justify-content: center;
   align-content: center;
   grid-column: 2/5;
+  margin: 0 10%;
 }
 .portfolio__gallery__container {
   box-sizing: border-box;
@@ -471,8 +473,8 @@ Section Portfolio
 .portfolio__gallery__container img {
   overflow: hidden;
   display: flex;
-  height: 400px;
-  width: 400px;
+  height: 40vh;
+  width: 100%;
   transition: 0.5s;
   cursor: pointer;
   object-fit: cover;
@@ -849,10 +851,6 @@ Section Contact contact
   .portfolio {
     grid-template-columns: 1fr;
   }
-  .portfolio__gallery__container img {
-    width: 100vw;
-    object-fit: cover;
-  }
   .portfolio__gallery__container__content h2 {
     font-size: 1.4em;
   }
@@ -1047,7 +1045,7 @@ Lightbox
   visibility: hidden;
   opacity: 0;
   transform: translateY(-50px);
-  transition: visibility 0s, opacity 0.5s, transform 1s ease;
+  transition: visibility 0s, opacity 1s, transform 1s ease;
   cursor: auto;
 }
 #lbContainer.active {
