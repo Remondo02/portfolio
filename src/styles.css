@@ -47,7 +47,7 @@ body {
 .logo-name {
   font-size: 20px;
 }
-#logo {
+.reveal-loaded #logo {
   animation: fill 0.5s ease forwards 3s;
 }
 .page {
@@ -125,7 +125,7 @@ body {
 .home-details__heading svg {
   margin: 0 auto -0.5em !important;
 }
-.icons {
+.reveal-loaded .icons {
   display: flex;
   justify-content: space-around;
   font-size: 1em;
@@ -145,7 +145,7 @@ body {
   display: grid;
   grid-column: 2/5;
 }
-.home__details__job {
+.reveal-loaded .home__details__job {
   margin: 0.75em 0;
   font-weight: 400;
   color: white;
@@ -874,7 +874,7 @@ Section Contact contact
 Navigation top 
 ************************/
 
-nav {
+.reveal-loaded nav {
   position: fixed;
   display: flex;
   justify-content: space-around;
@@ -1188,12 +1188,12 @@ Lightbox
 Smooth Scroll
 ************************/
 
-.about__details__heading.fade-in,
-.about__details__content.fade-in,
-.portfolio__gallery.fade-in,
-.contact__info.fade-in,
-.form-content.fade-in,
-.form-header.fade-in {
+.reveal-loaded .about__details__heading.fade-in,
+.reveal-loaded .about__details__content.fade-in,
+.reveal-loaded .portfolio__gallery.fade-in,
+.reveal-loaded .contact__info.fade-in,
+.reveal-loaded .form-content.fade-in,
+.reveal-loaded .form-header.fade-in {
   opacity: 1;
   transform: translateX(0px);
 }
@@ -1210,8 +1210,8 @@ input[type="submit"] {
   transition: all 1s ease-out;
 }
 
-.about__details__contact.fade-in,
-input[type="submit"].fade-in {
+.reveal-loaded .about__details__contact.fade-in,
+.reveal-loaded input[type="submit"].fade-in {
   opacity: 1;
   transform: translateY(0px);
 }
@@ -1227,7 +1227,7 @@ input[type="submit"].fade-in {
   opacity: 0;
   transition: all 1s ease-out;
 }
-.social.fade-in {
+.reveal-loaded .social.fade-in {
   opacity: 1;
 }
 .portfolio__gallery__container__content .details {
