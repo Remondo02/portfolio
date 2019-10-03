@@ -143,14 +143,16 @@ function init() {
         const container = document.createElement('div');
         container.id = 'lbContainer';
         lightbox.appendChild(container);
-
         const images = document.querySelectorAll('.portfolio__gallery__container img');
+        // const modalClose = document.querySelectorAll('.portfolio__gallery__container .modal-close');
 
         images.forEach(image => {
           const titles = image.parentElement.parentElement.childNodes[3].firstElementChild;
           const content =
             image.parentElement.parentElement.childNodes[3].childNodes[3];
           const link = image.parentElement.parentElement.childNodes[3].childNodes[5];
+          const modalClose = image.parentElement.parentElement.childNodes[3].childNodes[6].nextElementSibling;
+          console.log(modalClose);
 
           image.addEventListener('click', e => {
             lightbox.classList.add('active');
@@ -164,16 +166,20 @@ function init() {
             container.appendChild(titles);
             container.appendChild(content);
             container.appendChild(link);
-          })
+            container.appendChild(modalClose);
+          });
+          modalClose.addEventListener('click', e => {
+            lightbox.classList.remove('active');
+            container.classList.remove('active');
+          });
         })
-
         lightbox.addEventListener('click', e => {
           if (e.target != e.currentTarget) {
             return
           }
           lightbox.classList.remove('active');
           container.classList.remove('active');
-        })
+        });
       }
       lightBoxContainer();
 
