@@ -1154,8 +1154,6 @@ Lightbox
     max-height: 50%;
     max-width: 80%;
     padding: 4px;
-    background-color: black;
-    border: 2px solid rgb(163, 58, 58);
     margin-bottom: 0;
   }
   #lbContainer h2 {
@@ -1334,25 +1332,47 @@ IE
   height: 25vw;
   object-fit: content;
 }
-
-/* .ie .portfolio__gallery__container__content p {
-  margin: 0;
-  padding: 0;
-  color: white;
+.ie .portfolio__gallery__container__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+.ie .portfolio__gallery__container__content p {
+  display: block;
   transition: 0.5s;
   transform: translateX(50px);
   opacity: 0;
-  visibility: hidden;
-  display: none;
 }
-
 .ie .portfolio__gallery__container__content:hover p {
   opacity: 1;
   visibility: visible;
   transform: translateX(0);
   transition-delay: 0.3s;
-} */
+}
 
+.ie .portfolio__gallery__container__content .details {
+  transition: 0.5s;
+  transform: translateX(-50px);
+  opacity: 1;
+  display: block;
+  visibility: hidden;
+  opacity: 0;
+}
+.ie .button__hire--img {
+  display: block;
+  visibility: visible;
+  opacity: 1;
+}
+.ie .portfolio__gallery__container__content:hover .details {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+  transition-delay: 0.3s;
+}
+.ie .portfolio__gallery__container img {
+  cursor: auto !important;
+}
 .ie .contact__info {
   display: flex;
   flex-direction: row;

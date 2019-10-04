@@ -133,49 +133,53 @@ function init() {
   }
 
   const lightBoxContainer = () => {
+    if (isIE) {
+      return '';
+    } else {
 
-    const lightbox = document.createElement('div');
-    lightbox.id = 'lightbox';
-    document.body.appendChild(lightbox);
-    const container = document.createElement('div');
-    container.id = 'lbContainer';
-    lightbox.appendChild(container);
-    const images = document.querySelectorAll('.portfolio__gallery__container img');
+      const lightbox = document.createElement('div');
+      lightbox.id = 'lightbox';
+      document.body.appendChild(lightbox);
+      const container = document.createElement('div');
+      container.id = 'lbContainer';
+      lightbox.appendChild(container);
+      const images = document.querySelectorAll('.portfolio__gallery__container img');
 
-    images.forEach(image => {
-      const titles = image.parentElement.parentElement.childNodes[3].firstElementChild;
-      const content =
-        image.parentElement.parentElement.childNodes[3].childNodes[3];
-      const link = image.parentElement.parentElement.childNodes[3].childNodes[5];
-      const modalClose = image.parentElement.parentElement.childNodes[3].childNodes[6].nextElementSibling;
-      console.log(modalClose);
+      images.forEach(image => {
+        const titles = image.parentElement.parentElement.childNodes[3].firstElementChild;
+        const content =
+          image.parentElement.parentElement.childNodes[3].childNodes[3];
+        const link = image.parentElement.parentElement.childNodes[3].childNodes[5];
+        const modalClose = image.parentElement.parentElement.childNodes[3].childNodes[6].nextElementSibling;
+        console.log(modalClose);
 
-      image.addEventListener('click', e => {
-        lightbox.classList.add('active');
-        container.classList.add('active');
-        const img = document.createElement('img');
-        img.src = image.src;
-        while (container.firstChild) {
-          container.removeChild(container.firstChild)
+        image.addEventListener('click', e => {
+          lightbox.classList.add('active');
+          container.classList.add('active');
+          const img = document.createElement('img');
+          img.src = image.src;
+          while (container.firstChild) {
+            container.removeChild(container.firstChild)
+          }
+          container.appendChild(img);
+          container.appendChild(titles);
+          container.appendChild(content);
+          container.appendChild(link);
+          container.appendChild(modalClose);
+        });
+        modalClose.addEventListener('click', e => {
+          lightbox.classList.remove('active');
+          container.classList.remove('active');
+        });
+      })
+      lightbox.addEventListener('click', e => {
+        if (e.target != e.currentTarget) {
+          return
         }
-        container.appendChild(img);
-        container.appendChild(titles);
-        container.appendChild(content);
-        container.appendChild(link);
-        container.appendChild(modalClose);
-      });
-      modalClose.addEventListener('click', e => {
         lightbox.classList.remove('active');
         container.classList.remove('active');
       });
-    })
-    lightbox.addEventListener('click', e => {
-      if (e.target != e.currentTarget) {
-        return
-      }
-      lightbox.classList.remove('active');
-      container.classList.remove('active');
-    });
+    }
   }
 }
 
