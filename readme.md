@@ -1,5 +1,9 @@
 # Portfolio
 
+## Descriptif du projet
+
+Un site personnel dédié à la présentation de mes projets, principalement web, qui fait suite à ma formation de développeur fullstack, spécialisé Wordpress.
+
 ## Description des technologies employées
 
 1. XAMPP pour l'utilisation de PHP avec Apache ;
@@ -7,10 +11,11 @@
 3. Git Bash ;
 4. HTML5 ;
 5. CSS 3 ;
-6. Javascript (ES 6+), GSAP, ScrollMagic & smooth-scroll ;
-7. PHP 7.2 ;
-8. Git/Github ;
-9. Netlify.
+6. Javascript (ES6), GSAP, ScrollMagic & smooth-scroll ;
+7. Webpack, Babel, Polyfill ;
+8. PHP 7.2 ;
+9. Git/Github ;
+10. Netlify.
 
 ## Justification technique
 
@@ -24,8 +29,7 @@
 
 - HTML5 pour des raisons évidentes ;
 
-- CSS 3 sans passer par SASS, car pour des raisons de simplicité et de temps, cela me semblait plus adapté. Pas besoin de compiler, et donc de surcharger l'application avec une configuration additionnelle ([Webpack](https://webpack.js.org/) & [NPM](https://www.npmjs.com/), ou autre).
-  Le fichier CSS est long mais enrichi de commentaires afin de distinguer les différents éléments qui le composent.
+- CSS 3 sans passer par SASS, car pour des raisons de simplicité et de temps, cela me semblait plus adapté. Le fichier CSS est long mais enrichi de commentaires afin de distinguer les différents éléments qui le composent.
 
 - Javascript (ES 6+) afin d'utiliser le langage original et pour de bonnes pratiques.
 
@@ -35,10 +39,16 @@
 
 - [Smooth-scroll](https://github.com/cferdinandi/smooth-scroll), autre libraire pour un défilement fluide sans passer par la propriété « scroll-behavior » de CSS qui n'est malheureusement pas encore compatible sur tout les navigateurs (notamment Safari).
 
+- [Webpack](https://webpack.js.org/) et [Babel](https://babeljs.io/) afin de transformer ES6 en ES5 lisible depuis n'importe quel navigateur ;
+
+- [Polyfill](https://polyfill.io/v3/) qui permet l'ajout de _features_ spécifiques pour certains navigateurs ;
+
 - PHP afin de rendre le site multilangue (ce qui justifie l'utilisation d'Apache en première instance).
 
 - Git/Github pour le _versioning_ afin de rendre le repository public, et donc disponible pour consultation.
 
-- [Netlify](https://www.netlify.com/) car il permet un déploiement simple et efficace depuis Github par exemple, et gère le fonctionnement de formulaires via l'injection de balises additionnelles dans le HTML.
+- [Netlify](https://www.netlify.com/) car il permet un déploiement simple et efficace depuis Github, et gère le fonctionnement de formulaires via l'injection de balises additionnelles dans le HTML. De plus, à chaque push sur le repository, le déploiement live est directement appliqué.
 
 Note : la version dite « dynamique » utilisant PHP se trouve dans la branche « languages » du repository, car Netlify ne prend pas en charge Apache et PHP.
+
+Note 2 : au vu de la taille du fichier CSS natif (1300+ lignes), un axe d'amélioration serait d'implémenter SASS afin de fractionner le code pour une meilleure visivilité.
