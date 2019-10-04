@@ -151,7 +151,6 @@ function init() {
           image.parentElement.parentElement.childNodes[3].childNodes[3];
         const link = image.parentElement.parentElement.childNodes[3].childNodes[5];
         const modalClose = image.parentElement.parentElement.childNodes[3].childNodes[6].nextElementSibling;
-        console.log(modalClose);
 
         image.addEventListener('click', e => {
           lightbox.classList.add('active');

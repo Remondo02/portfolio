@@ -902,6 +902,7 @@ Navigation top
   font-family: "Poppins", sans-serif;
 }
 .logo__svg svg {
+  display: flex;
   width: 2.5em;
 }
 .nav-links {
