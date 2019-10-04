@@ -1148,6 +1148,7 @@ Lightbox
   #lbContainer {
     width: 100%;
     height: 100vh;
+    padding: 7em 0;
   }
   #lbContainer img {
     max-height: 50%;
@@ -1162,6 +1163,7 @@ Lightbox
     margin: 0.3em 0 !important;
   }
   #lbContainer p {
+    font-size: 1.2em !important;
     max-width: 80% !important;
   }
   #lbContainer .details {
@@ -1172,15 +1174,11 @@ Lightbox
   #lbContainer .button__hire--img {
     width: 100% !important;
   }
-  #lbContainer p {
-    font-size: 1em !important;
-  }
   #lbContainer .details {
     width: 80% !important;
   }
   #lbContainer .button__hire--img {
     font-size: 1em !important;
-    margin: 0;
   }
 }
 
@@ -1336,6 +1334,25 @@ IE
   height: 25vw;
   object-fit: content;
 }
+
+/* .ie .portfolio__gallery__container__content p {
+  margin: 0;
+  padding: 0;
+  color: white;
+  transition: 0.5s;
+  transform: translateX(50px);
+  opacity: 0;
+  visibility: hidden;
+  display: none;
+}
+
+.ie .portfolio__gallery__container__content:hover p {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+  transition-delay: 0.3s;
+} */
+
 .ie .contact__info {
   display: flex;
   flex-direction: row;

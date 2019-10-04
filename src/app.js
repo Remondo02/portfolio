@@ -105,7 +105,7 @@ function init() {
 
     const burger = document.querySelector('.burger');
     const nav = document.querySelector('.nav-links');
-    const navLinks = Array.from(document.querySelectorAll('.nav-links li'));
+    const navLinks = document.querySelectorAll('.nav-links li');
     burger.addEventListener('click', () => {
       nav.classList.toggle('nav-active');
 
@@ -140,7 +140,7 @@ function init() {
     const container = document.createElement('div');
     container.id = 'lbContainer';
     lightbox.appendChild(container);
-    const images = Array.from(document.querySelectorAll('.portfolio__gallery__container img'));
+    const images = document.querySelectorAll('.portfolio__gallery__container img');
 
     images.forEach(image => {
       const titles = image.parentElement.parentElement.childNodes[3].firstElementChild;
