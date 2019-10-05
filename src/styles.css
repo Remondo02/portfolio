@@ -409,7 +409,6 @@ blockquote cite a:visited {
 .about__details__contact .button:first-child {
   margin-right: 4em;
 }
-
 .button__hire,
 .button__download {
   display: inline-block;
@@ -587,7 +586,6 @@ textarea {
   color: #5fa8d3;
   filter: brightness(85%);
 }
-
 .form label,
 .form label::after {
   position: absolute;
@@ -705,7 +703,6 @@ Section Contact contact
 .social__container__right {
   text-align: right;
 }
-
 .social .social__container__right__items,
 .social .social__container__right__items li,
 .social .copyright span,
