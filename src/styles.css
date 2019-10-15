@@ -1305,7 +1305,9 @@ Animation off media queries
 /***************************
 IE specific 
 ***************************/
-
+.ie .my-portfolio {
+  background: rgb(43, 55, 961);
+}
 .ie nav {
   height: 10vh;
 }
