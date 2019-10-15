@@ -1,12 +1,20 @@
 function init() {
 
-
-  var ua = window.navigator.userAgent;
-  var isIE = /MSIE|Trident/.test(ua);
-
+  /**
+  Verification is the browser is IE. If it's IE, add specific classes.
+   */
+  const ua = window.navigator.userAgent;
+  const isIE = /MSIE|Trident/.test(ua);
+  /**
+  If it's IE, add specific classes.
+   */
   if (isIE) {
     document.documentElement.classList.add('ie')
   }
+
+  /**
+  Add a class on the document Element that trigger the animation for the logo, and an event listener to check if the DOM is loaded, in which case various functions are executed.
+   */
   document.documentElement.classList.add('reveal-loaded')
   window.addEventListener('DOMContentLoaded', function () {
     homeTimeline();
@@ -16,6 +24,9 @@ function init() {
     lightBoxContainer();
   })
 
+  /**
+  Function using the TimelineMax GSAP librairy (https://greensock.com/timelinemax/) for complex sequencing animations. The first argument is the element in which you want the effet(s) to be applied. The second is the duration of the effect(s), the third, an object, contain the options you want for the selected element, such as the opacity, the scale or the axis. The fourth option is the delay between each animations of the same triggered elements, and finally the fifth is the time which separe the previous element from the current one.
+   */
   const homeTimeline = () => {
 
     const tl = new TimelineMax();
@@ -38,12 +49,15 @@ function init() {
       .staggerFrom('nav', 1, { opacity: 0, y: '-100%' }, { opacity: 100, y: '0%' }, "-=0.5")
   }
 
+  /**
+  Function using ScrollMagic librairy (https://scrollmagic.io/) to fade elements using trigger element or trigger hooks. For each new animation, you declare a new ScrollMagic scene. The argument stores an object which has various properties such as the triggerElement or the triggerHook. You then add a setClassToggle which will be the element to display with specific options, and finally add it to the controller created and stored beforehand in a variable.
+   */
   const splitScroll = () => {
 
     const controller = new ScrollMagic.Controller();
 
     new ScrollMagic.Scene({
-      triggerElement: '.about',
+      triggerElement: '.about'
     })
       .setClassToggle('.about__details__heading', 'fade-in')
       .addTo(controller);
@@ -101,6 +115,9 @@ function init() {
       .addTo(controller);
   }
 
+  /**
+  Function showing the burger menu with a fade-in effect applied on each item.
+   */
   const navSlide = () => {
 
     const burger = document.querySelector('.burger');
@@ -108,7 +125,9 @@ function init() {
     const navLinks = document.querySelectorAll('.nav-links li');
     burger.addEventListener('click', () => {
       nav.classList.toggle('nav-active');
-
+      /**
+      For each selected element, by default it will add the styles stored in the else statement. In case the style is already applied, the if statement set the animation empty.
+       */
       navLinks.forEach((link, index) => {
         if (link.style.animation) {
           link.style.animation = ''
@@ -120,23 +139,29 @@ function init() {
     });
   }
 
+  /**
+  Function using Smooth-Scroll (https://github.com/cferdinandi/smooth-scroll), another usefull JS librairy, for easy set-ups smooth-scroll elements. The first parameter(s) is/are the selected element(s) in which you want the smooth Scroll to be applied; the second element, an object here, contain the speed of the animation.
+   */
   const smoothScroll = () => {
 
     const scroll = new SmoothScroll('.navbar, .about__details__contact, a[href*="#"]', {
       speed: 800
     });
-
-    const selectElement = (element) => document.querySelector(element);
-    selectElement('.burger').addEventListener('click', () => {
-      selectElement('.burger').classList.toggle('active');
-    });
   }
 
+  /**
+  Function creating a lightbox effect, in which all the selected elements related to the images (screenshots of the projects) are displayed as well.
+   */
   const lightBoxContainer = () => {
+    /**
+    In case the browser is IE, the function return an empty string to avoid compatibility issues.
+     */
     if (isIE) {
       return '';
     } else {
-
+      /**
+      Creating the various elements, including the ligtbox container, and the container that will later on contained the titles, links, images, content and modal close elements.
+       */
       const lightbox = document.createElement('div');
       lightbox.id = 'lightbox';
       document.body.appendChild(lightbox);
@@ -144,14 +169,18 @@ function init() {
       container.id = 'lbContainer';
       lightbox.appendChild(container);
       const images = document.querySelectorAll('.portfolio__gallery__container img');
-
+      /**
+      Loop in which selected elements related to the images are stored in order to be used later on.
+       */
       images.forEach(image => {
         const titles = image.parentElement.parentElement.childNodes[3].firstElementChild;
         const content =
           image.parentElement.parentElement.childNodes[3].childNodes[3];
         const link = image.parentElement.parentElement.childNodes[3].childNodes[5];
         const modalClose = image.parentElement.parentElement.childNodes[3].childNodes[6].nextElementSibling;
-
+        /**
+        Add an event listener for the selected image, and create an element which get the source file based on the clicked image.
+         */
         image.addEventListener('click', e => {
           lightbox.classList.add('active');
           container.classList.add('active');
@@ -160,17 +189,26 @@ function init() {
           while (container.firstChild) {
             container.removeChild(container.firstChild)
           }
+          /**
+          Append selected children in the container which is contained in the lightbox element.
+           */
           container.appendChild(img);
           container.appendChild(titles);
           container.appendChild(content);
           container.appendChild(link);
           container.appendChild(modalClose);
         });
+        /**
+        Add an event listener on the ligthbox & container which remove the class active when clicked.
+         */
         modalClose.addEventListener('click', e => {
           lightbox.classList.remove('active');
           container.classList.remove('active');
         });
       })
+      /**
+      Event listener which prevent another targeted element to be clicked while the current target is active and displayed.
+       */
       lightbox.addEventListener('click', e => {
         if (e.target != e.currentTarget) {
           return
@@ -183,6 +221,3 @@ function init() {
 }
 
 init();
-
-
-

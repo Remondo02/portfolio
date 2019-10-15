@@ -632,7 +632,9 @@ textarea {
 /***************************
 Section Contact contact
 ***************************/
-
+footer {
+  background: #151515;
+}
 .contact {
   background: #151515;
   padding-top: 12rem;
@@ -1392,6 +1394,10 @@ IE specific
 }
 .ie .portfolio__gallery__container img {
   cursor: auto !important;
+}
+.ie footer {
+  display:flex;
+  justify-content:center;
 }
 .ie .contact__info {
   flex-direction: row;
