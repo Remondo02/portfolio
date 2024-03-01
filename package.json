@@ -1,7 +1,6 @@
 {
   "name": "portfolio",
   "version": "1.0.0",
-  "description": "1. XAMPP pour l'utilisation de PHP avec Apache ;\r 2. Visual Studio Code comme éditeur de texte ;\r 3. Git Bash ;\r 4. HTML5 ;\r 5. CSS 3 ;\r 6. Javascript (ES 6+), GSAP, ScrollMagic & smooth-scroll ;\r 7. PHP 7.2 ;\r 8. Git/Github ;\r 9. Netlify.",
   "main": "app.js",
   "directories": {
     "doc": "docs"
@@ -11,24 +10,12 @@
     "build": "webpack",
     "start": "webpack-dev-server --output-public-path=/build/"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Remondo02/portfolio.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Remondo02/portfolio/issues"
-  },
-  "homepage": "https://github.com/Remondo02/portfolio#readme",
   "devDependencies": {
+    "@babel/core": "^7.24.0",
+    "@babel/preset-env": "^7.24.0",
     "babel-loader": "^8.0.6",
-    "webpack": "^4.41.0",
-    "webpack-cli": "^3.3.9",
-    "webpack-dev-server": "^3.8.2"
-  },
-  "dependencies": {
-    "@babel/core": "^7.6.2",
-    "@babel/preset-env": "^7.6.2"
+    "webpack": "^5.90.3",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.0.2"
   }
 }
