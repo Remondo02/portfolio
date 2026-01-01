@@ -19,7 +19,7 @@
     "webpack-dev-server": "^5.0.2"
   },
   "dependencies": {
-    "body-parser": "^1.20.3",
+    "body-parser": "^1.20.4",
     "braces": "^3.0.3"
   }
 }
